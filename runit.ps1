@@ -124,31 +124,43 @@ Remove-Dir-Patiently -Path "minimus"
 Remove-Dir-Patiently -Path "angular-realworld-example-app" 
 
 $cleanASws = DotnetBenchmark-Build -cloneUrl https://github.com/jasontaylordev/CleanArchitecture.git -dirName CleanArchitecture -buildCommand build
-#Clone cleanA ms:    3612
-#Install 1 cleanA ms:  1344
-#Install 2 cleanA ms:  872
-#Build1 cleanA ms:   48974
-#Build2 cleanA ms:   4325
+Print-Build-Sws $cleanASws -name cleanA
+#Ryzen 3600 with SSD
+#Clone cleanA ms:    3612, 4327, 4651
+#Install 1 cleanA ms:  1344, 1389, 1339
+#Install 2 cleanA ms:  872, 896, 842
+#Build1 cleanA ms:   48974, 47286, 49033
+#Build2 cleanA ms:   4325, 4356, 4767
 
 $minimusSws = NpmBenchmark-Build -cloneUrl https://github.com/hamedbaatour/minimus.git -dirName minimus -buildCommand build
+Print-Build-Sws $minimusSws -name minimus
+#dell laptop
 #Clone minimus ms:  3287, 3339, 3283, 3136
 #Install 1 minimus ms:  52926, 51534, 47663, 43418
 #Install 2 minimus ms:  12826
 #Build1 minimus ms:  26305, 23601, 25595, 21956, 22070
 #Build2 minimus ms:  24165, 27011, 28470, 22086, 22390
+#Ryzen 3600 with SSD
+#Clone minimus ms:    3361
+#Install 1 minimus ms:  57934
+#Install 2 minimus ms:  34277
+#Build1 minimus ms:   10237
+#Build2 minimus ms:   9785
 
-#Clone realworld ms:    3756
-#Install 1 realworld ms:  49557
-#Install 2 realworld ms:  8818
-#Build1 realworld ms:   44690
-#Build2 realworld ms:   33465
 
 $realSws = NpmBenchmark-Build -cloneUrl https://github.com/gothinkster/angular-realworld-example-app.git -dirName angular-realworld-example-app -buildCommand build
+#dell laptop
 #Clone realworld ms:  2014, 2052, 2002, 3756
 #Install 1 realworld ms:  49557, 52612
 #Install 2 realworld ms:  8818
 #Build1 realworld ms:  41915, 44690
 #Build2 realworld ms:  33535, 33465
+#Ryzen 3600 with SSD
+#Clone realworld ms:    3660
+#Install 1 realworld ms:  36355
+#Install 2 realworld ms:  7122
+#Build1 realworld ms:   21419
+#Build2 realworld ms:   15784
 
 Print-Build-Sws $cleanASws -name cleanA
 Print-Build-Sws $minimusSws -name minimus
