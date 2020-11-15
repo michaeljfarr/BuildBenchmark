@@ -131,6 +131,13 @@ Print-Build-Sws $cleanASws -name cleanA
 #Install 2 cleanA ms:  872, 896, 842
 #Build1 cleanA ms:   48974, 47286, 49033
 #Build2 cleanA ms:   4325, 4356, 4767
+#Ryzen 2600 with NVMe
+#Clone cleanA ms:    3348, 3206
+#Install 1 cleanA ms:  1813, 1799
+#Install 2 cleanA ms:  1140, 1120
+#Build1 cleanA ms:   40525, 40660
+#Build2 cleanA ms:   6383, 6480
+
 
 $minimusSws = NpmBenchmark-Build -cloneUrl https://github.com/hamedbaatour/minimus.git -dirName minimus -buildCommand build
 Print-Build-Sws $minimusSws -name minimus
@@ -146,6 +153,12 @@ Print-Build-Sws $minimusSws -name minimus
 #Install 2 minimus ms:  34277
 #Build1 minimus ms:   10237
 #Build2 minimus ms:   9785
+#Ryzen 2600 with NVMe
+#Clone minimus ms:    2921, 2367
+#Install 1 minimus ms:  30479, 33357
+#Install 2 minimus ms:  9891, 9204
+#Build1 minimus ms:   15079, 14914
+#Build2 minimus ms:   14944, 14980
 
 
 $realSws = NpmBenchmark-Build -cloneUrl https://github.com/gothinkster/angular-realworld-example-app.git -dirName angular-realworld-example-app -buildCommand build
@@ -161,6 +174,12 @@ $realSws = NpmBenchmark-Build -cloneUrl https://github.com/gothinkster/angular-r
 #Install 2 realworld ms:  7122
 #Build1 realworld ms:   21419
 #Build2 realworld ms:   15784
+#Ryzen 2600 with NVMe
+#Clone realworld ms:    3943
+#Install 1 realworld ms:  34493
+#Install 2 realworld ms:  6588
+#Build1 realworld ms:   29139
+#Build2 realworld ms:   21392
 
 Print-Build-Sws $cleanASws -name cleanA
 Print-Build-Sws $minimusSws -name minimus
